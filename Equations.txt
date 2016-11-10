@@ -1,9 +1,8 @@
 METHOD RK4
 
 STARTTIME = 0
-STOPTIME=365
+STOPTIME=365  ; in days
 DT = 0.02
-
 
 d/dt (Ai) =Phi*Fi* (1-(Ai + Ap)/C) - (Gamma+Mua+Delta)*Ai
 d/dt (Ap) = Phi*(1 -(Ai + Ap)/C)*Fp -(Gamma+Mua)*Ap + Delta*Ai
@@ -14,7 +13,6 @@ d/dt (Fp) = Betap*M*P/(M+Ms) - Muf*Fp
 d/dt (M) = (1-R)*Gamma*(Ai+Ap) - Mum*M
 d/dt (Ms) = Alpha - Mums*Ms
 
-
 init Ai = 100
 init Ap = 100
 init I = 100
@@ -23,7 +21,6 @@ init Fi = 100
 init Fp = 100
 init M = 100
 init Ms = 0
-
 
 Phi = 2
 Gamma = 0.1
