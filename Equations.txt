@@ -2,7 +2,7 @@ METHOD RK4
 
 STARTTIME = 0
 STOPTIME=365
-DT = 1
+DT = 0.02
 
 
 d/dt (Ai) =Phi*Fi* (1-(Ai + Ap)/C) - (Gamma+Mua+Delta)*Ai
